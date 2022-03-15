@@ -21,7 +21,7 @@ export const init = (options: InitOptions): OnboardAPI => {
 
 export const useConnectWallet = (): [
   { wallet: WalletState | null; connecting: boolean },
-  (options: ConnectOptions) => Promise<void>,
+  (options?: ConnectOptions) => Promise<void>,
   (wallet: DisconnectOptions) => Promise<void>
 ] => {
   if (!web3Onboard) throw new Error('Must initialize before using hooks.')
